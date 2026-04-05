@@ -1,0 +1,2776 @@
+fileFormatVersion: 2
+guid: 141ffd78dab60b74b9b51f9439e072c3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: chaoyao_0
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 5536
+        width: 455
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6d4e57cfe60f046b6e00c026eef111
+      internalID: -1949985517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 5536
+        width: 455
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608e1a9f4fe35d24ba60611476086186
+      internalID: 1611026914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_2
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 5536
+        width: 456
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d2afc8e5601784d9e16b27a673f8dc
+      internalID: 1288220052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_3
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 5536
+        width: 455
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d6b8b708139fe42be2b5c5f19f5cbc
+      internalID: -877865792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_4
+      rect:
+        serializedVersion: 2
+        x: 2378
+        y: 5536
+        width: 455
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142809b62f6dd98459d103f1fdc82791
+      internalID: 486314545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_5
+      rect:
+        serializedVersion: 2
+        x: 2958
+        y: 5536
+        width: 454
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81778ada6ef583b40b7112aeed63d5eb
+      internalID: 424431520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_6
+      rect:
+        serializedVersion: 2
+        x: 3537
+        y: 5536
+        width: 454
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91db8497eee1ff44c910eca80665cfcd
+      internalID: 1342026615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_7
+      rect:
+        serializedVersion: 2
+        x: 4117
+        y: 5536
+        width: 452
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a403e9074ccc146858c5ea2e6a3122
+      internalID: -349263116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_8
+      rect:
+        serializedVersion: 2
+        x: 4696
+        y: 5536
+        width: 452
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70a63697058bf045ab7787a640743a0
+      internalID: -1775512801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_9
+      rect:
+        serializedVersion: 2
+        x: 5274
+        y: 5536
+        width: 454
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b093f0e9f950d844799ab75d334e23cb
+      internalID: -290774104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_10
+      rect:
+        serializedVersion: 2
+        x: 5853
+        y: 5536
+        width: 454
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d635fac03e0d9e409d7787e878f92fc
+      internalID: -1483108739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_11
+      rect:
+        serializedVersion: 2
+        x: 6433
+        y: 5536
+        width: 453
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f2b21cb6acd3745aded2d9d185a868
+      internalID: 1945246029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_12
+      rect:
+        serializedVersion: 2
+        x: 7012
+        y: 5536
+        width: 453
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14cc338861a0dbc4e930fc89f9ee4bf9
+      internalID: -221286126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_13
+      rect:
+        serializedVersion: 2
+        x: 7591
+        y: 5536
+        width: 453
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0e21bb3de2e4e42a8e4bce7643f047
+      internalID: -842852901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_14
+      rect:
+        serializedVersion: 2
+        x: 8171
+        y: 5536
+        width: 451
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f680ecafac303e64b8922e7323393c90
+      internalID: 1482252916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_15
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 4843
+        width: 450
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ae774ceef6cf64099ca0423ec22c47
+      internalID: 1267844430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_16
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 4843
+        width: 450
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db140a9a5d7fec2448ed1ee0fead2f84
+      internalID: 2005356311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_17
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 4843
+        width: 450
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d435426b8c534a44bd46ca1a848995e
+      internalID: 2103268545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_18
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 4843
+        width: 451
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b798ef08d6ed574d880846a4b8dfd6c
+      internalID: 381567133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_19
+      rect:
+        serializedVersion: 2
+        x: 2383
+        y: 4843
+        width: 451
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11d8fc542711e44eb43bd3127889003
+      internalID: -994948154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_20
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 4843
+        width: 451
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ed930da7c23c846abfd81f8bee8f78
+      internalID: 72448550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_21
+      rect:
+        serializedVersion: 2
+        x: 3541
+        y: 4843
+        width: 451
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7465de196b341d24299e55d0b7eab348
+      internalID: 904654820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_22
+      rect:
+        serializedVersion: 2
+        x: 4121
+        y: 4843
+        width: 449
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f0ddd7160a468439ebd4e2ab40ed35
+      internalID: 1730022815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_23
+      rect:
+        serializedVersion: 2
+        x: 4701
+        y: 4843
+        width: 448
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6664e0026adccc3448ae86b73bee3b31
+      internalID: 880776911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_24
+      rect:
+        serializedVersion: 2
+        x: 5280
+        y: 4843
+        width: 448
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9adfede2e3c2d544936033188d779e1
+      internalID: 1638452807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_25
+      rect:
+        serializedVersion: 2
+        x: 5859
+        y: 4843
+        width: 449
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f1ded7cf59c64448a62dfee0c8e7cd
+      internalID: 1318471412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_26
+      rect:
+        serializedVersion: 2
+        x: 6437
+        y: 4843
+        width: 450
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e13947382b612046923f6d7c6ab81e8
+      internalID: 1124750827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_27
+      rect:
+        serializedVersion: 2
+        x: 7016
+        y: 4843
+        width: 450
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d93697c893193d49955311712439c2f
+      internalID: -1793266727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_28
+      rect:
+        serializedVersion: 2
+        x: 7594
+        y: 4843
+        width: 451
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bb566ffc6148944bb7131445d52723
+      internalID: -58544887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_29
+      rect:
+        serializedVersion: 2
+        x: 8173
+        y: 4843
+        width: 451
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9d26d69b35237478207f1db9ac07a6
+      internalID: 2141433596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_30
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 4151
+        width: 451
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff048d1529b5d994fa664611b2168710
+      internalID: -552154767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_31
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 4151
+        width: 451
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc95fd31b113f4046bb8cf07ab0dae5f
+      internalID: -862719632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_32
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 4151
+        width: 451
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66be41225463c544ab70a891d3f9116e
+      internalID: 109598188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_33
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 4151
+        width: 452
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2cd5cfbd38cca04bb8b3b4ea0bef27f
+      internalID: -420747497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_34
+      rect:
+        serializedVersion: 2
+        x: 2382
+        y: 4151
+        width: 452
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89f32beadd4a484a947d08fc31375d8
+      internalID: -716831214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_35
+      rect:
+        serializedVersion: 2
+        x: 2961
+        y: 4151
+        width: 452
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b21729bef44a44faa8b38163561240
+      internalID: -1391201952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_36
+      rect:
+        serializedVersion: 2
+        x: 3541
+        y: 4151
+        width: 452
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 669d7d693a5128d49a8549483ed7e414
+      internalID: -1502495261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_37
+      rect:
+        serializedVersion: 2
+        x: 4121
+        y: 4151
+        width: 450
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f25a11b0d2da9246a3da6db0933628f
+      internalID: -703737057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_38
+      rect:
+        serializedVersion: 2
+        x: 4701
+        y: 4151
+        width: 449
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7a801f249171a4696ebe7494d71d3d
+      internalID: -1108694522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_39
+      rect:
+        serializedVersion: 2
+        x: 5281
+        y: 4151
+        width: 448
+        height: 690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4cbe36274d22943a723c87fd2d3a97
+      internalID: 1279320149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_40
+      rect:
+        serializedVersion: 2
+        x: 5860
+        y: 4151
+        width: 448
+        height: 690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715a9dd227e2a9c46961d9b16d912e30
+      internalID: 1143023777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_41
+      rect:
+        serializedVersion: 2
+        x: 6440
+        y: 4151
+        width: 447
+        height: 690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0c89ee55c99d147b878a4eb0f157f8
+      internalID: 476768300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_42
+      rect:
+        serializedVersion: 2
+        x: 7021
+        y: 4151
+        width: 446
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0ee349618bc3d42935493136983d96
+      internalID: -244474653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_43
+      rect:
+        serializedVersion: 2
+        x: 7600
+        y: 4151
+        width: 446
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1162a20c05eca714bbf1097c860e9020
+      internalID: -796091646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_44
+      rect:
+        serializedVersion: 2
+        x: 8180
+        y: 4151
+        width: 445
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860cca525a438624caed1fff7f9dbd36
+      internalID: 1064101526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_45
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 3460
+        width: 444
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9fd37ea896206e4a8aa0a901c313d58
+      internalID: 465651584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_46
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 3460
+        width: 443
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddf737d919e1f1468497f2d34b20e23
+      internalID: 664117431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_47
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 3460
+        width: 444
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28280630ebcf1c2479aaf0d3733aeef4
+      internalID: 664397008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_48
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 3460
+        width: 444
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568a51588cf11af4ba1138f83808499e
+      internalID: -57953307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_49
+      rect:
+        serializedVersion: 2
+        x: 2393
+        y: 3460
+        width: 443
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e20b43855744a244be18d1197a93948
+      internalID: -599903688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_50
+      rect:
+        serializedVersion: 2
+        x: 2972
+        y: 3460
+        width: 444
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bfcd6f979bedc442b9dcc6a2ad9cf3c
+      internalID: -1273402190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_51
+      rect:
+        serializedVersion: 2
+        x: 3552
+        y: 3460
+        width: 443
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ee227cdcf89f04584f26c730192e90
+      internalID: -1219093401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_52
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 3460
+        width: 444
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6b448596e163d4fb5e4b86ffd7fe2c
+      internalID: -1227552710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_53
+      rect:
+        serializedVersion: 2
+        x: 4709
+        y: 3460
+        width: 443
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e4ffe68f2a56144a9ad5bee172bd3f9
+      internalID: -1552744358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_54
+      rect:
+        serializedVersion: 2
+        x: 5288
+        y: 3460
+        width: 444
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03afa0ade294e748abc13f2cdb43103
+      internalID: 334892371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_55
+      rect:
+        serializedVersion: 2
+        x: 5868
+        y: 3460
+        width: 443
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e34d726db05684b907dde18aa12155
+      internalID: -1178911514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_56
+      rect:
+        serializedVersion: 2
+        x: 6447
+        y: 3460
+        width: 443
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3345e1d1e39b945aacd200a5ca2897
+      internalID: -557889201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_57
+      rect:
+        serializedVersion: 2
+        x: 7027
+        y: 3460
+        width: 442
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94bda003eaa057439969e6fdda48f6b
+      internalID: -719775026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_58
+      rect:
+        serializedVersion: 2
+        x: 7607
+        y: 3460
+        width: 441
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643f6867fe327e141baa03701f0a1692
+      internalID: 1307976157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_59
+      rect:
+        serializedVersion: 2
+        x: 8186
+        y: 3460
+        width: 441
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e6cabee3bb2b24eb7ef6e1a5f746ff
+      internalID: -109554162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_60
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2767
+        width: 442
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8bdd3e2ee3448f4b96d941194e8e96e
+      internalID: -542876829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_61
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 2767
+        width: 445
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d084d3b3d96ed1941af1b9fb2ef5bfe9
+      internalID: 957502371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_62
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 2767
+        width: 446
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609085a93bf90db4f8e9b5f3440980f8
+      internalID: 448178842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_63
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 2767
+        width: 449
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1126a98352f3f594d8dbdc16de01708b
+      internalID: -852902916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_64
+      rect:
+        serializedVersion: 2
+        x: 2388
+        y: 2767
+        width: 454
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eaf9d547c0dfd6468fb9fe3f1b26860
+      internalID: 796304286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_65
+      rect:
+        serializedVersion: 2
+        x: 2964
+        y: 2767
+        width: 459
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d9e693318d5cd43915c8d1f6a36afc
+      internalID: -17644796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_66
+      rect:
+        serializedVersion: 2
+        x: 3541
+        y: 2767
+        width: 463
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2e13c545347814d98ebc10e4c04312
+      internalID: -1280219198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_67
+      rect:
+        serializedVersion: 2
+        x: 4117
+        y: 2767
+        width: 469
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd1abc39c95bf44d82899848c90b1df
+      internalID: 1317874723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_68
+      rect:
+        serializedVersion: 2
+        x: 4693
+        y: 2767
+        width: 475
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4bcced0eaea9004186f9762c96cbe19
+      internalID: -198518560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_69
+      rect:
+        serializedVersion: 2
+        x: 5270
+        y: 2767
+        width: 480
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f532d45c401e886499fdba09acbf44d5
+      internalID: -1018545920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_70
+      rect:
+        serializedVersion: 2
+        x: 5846
+        y: 2767
+        width: 486
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191e07cb73b16b445a9b49be70100efb
+      internalID: 378415644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_71
+      rect:
+        serializedVersion: 2
+        x: 6423
+        y: 2767
+        width: 493
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5770814a2529a7e4186d84b691d259ad
+      internalID: -2132530153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_72
+      rect:
+        serializedVersion: 2
+        x: 6998
+        y: 2767
+        width: 501
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380640415b114124bad8cd1e6340ca0c
+      internalID: 1345565819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_73
+      rect:
+        serializedVersion: 2
+        x: 7575
+        y: 2767
+        width: 508
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69981c6b74316f408d4a1061c7b8b26
+      internalID: 1546011444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_74
+      rect:
+        serializedVersion: 2
+        x: 8151
+        y: 2767
+        width: 516
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2cd9fb7cc877d94fadc39773fcd2a33
+      internalID: -830931690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_75
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 2075
+        width: 523
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001c662c8ad5d834f83f11f258475582
+      internalID: -439488162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_76
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 2075
+        width: 531
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc630588acfd79d4ab947a13eac67506
+      internalID: -1425481455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_77
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 2075
+        width: 538
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3837e37371fcf84bbc54e246b5978e7
+      internalID: -113627692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_78
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 2075
+        width: 545
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09af935585d47d7428491688f2a154cb
+      internalID: 521878733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_79
+      rect:
+        serializedVersion: 2
+        x: 2346
+        y: 2075
+        width: 549
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07289c0f5cd4eff44876e6b1bcd81bbf
+      internalID: -781908422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_80
+      rect:
+        serializedVersion: 2
+        x: 2922
+        y: 2075
+        width: 552
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 085d4775903a40240892813b5ff5f605
+      internalID: 1608828676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_81
+      rect:
+        serializedVersion: 2
+        x: 3499
+        y: 2075
+        width: 555
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9175fc52ca0e8a4598ea20e3c274a75
+      internalID: 1137932196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_82
+      rect:
+        serializedVersion: 2
+        x: 4074
+        y: 2075
+        width: 559
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 503d26a8056a4d94fb374c0113e70d65
+      internalID: 805468363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_83
+      rect:
+        serializedVersion: 2
+        x: 4651
+        y: 2075
+        width: 561
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97fa5a8c3dd91574ab50e27f6e1af95d
+      internalID: -78659438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_84
+      rect:
+        serializedVersion: 2
+        x: 5228
+        y: 2075
+        width: 563
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f70dc84de0a61f42a846975eb5e88db
+      internalID: -615485010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_85
+      rect:
+        serializedVersion: 2
+        x: 5804
+        y: 2075
+        width: 566
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c54454499846041a6ea2257c756429
+      internalID: 1410734969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_86
+      rect:
+        serializedVersion: 2
+        x: 6381
+        y: 2075
+        width: 567
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be187eb9ea5786246ae736c5943db1e7
+      internalID: 872907302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_87
+      rect:
+        serializedVersion: 2
+        x: 6958
+        y: 2075
+        width: 569
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a12580cf7a8c79488ec35873876f362
+      internalID: 1052107361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_88
+      rect:
+        serializedVersion: 2
+        x: 7536
+        y: 2075
+        width: 571
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c27b209da28b894cb7c8dcc4dec72f9
+      internalID: -1971545551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_89
+      rect:
+        serializedVersion: 2
+        x: 8114
+        y: 2075
+        width: 571
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ad433cb289b134b8c54851fd3d9041
+      internalID: 1658632316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_90
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1384
+        width: 574
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6150ffca1ddf6942a04882272bd0de8
+      internalID: 1205833078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_91
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1384
+        width: 575
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643e743848b635b48a4b998f14f313c2
+      internalID: 2007770979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_92
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 1384
+        width: 575
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8cab83305dc04499b747c7adee7f7a
+      internalID: 896839595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_93
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 1384
+        width: 574
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b600d6f9b91cc754ea1b9c21c605f3bf
+      internalID: -1677254482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_94
+      rect:
+        serializedVersion: 2
+        x: 2321
+        y: 1384
+        width: 574
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70ecd7b5a0f7ab4792e851e7c2eb812
+      internalID: 1568259910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_95
+      rect:
+        serializedVersion: 2
+        x: 2900
+        y: 1384
+        width: 574
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a1e89da1f63e764e939be139d821178
+      internalID: -33307152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_96
+      rect:
+        serializedVersion: 2
+        x: 3480
+        y: 1384
+        width: 574
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371870aac227f084ebeb7b9898852de1
+      internalID: 1180540420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_97
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 1384
+        width: 575
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56605bb7b1244954691ab8bc06c2df62
+      internalID: -1050510604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_98
+      rect:
+        serializedVersion: 2
+        x: 4638
+        y: 1384
+        width: 574
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec4cd7c94e7a64419151a8dc272cff8
+      internalID: 1503536297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_99
+      rect:
+        serializedVersion: 2
+        x: 5217
+        y: 1384
+        width: 574
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d6186abdc3258241944268e1721aea7
+      internalID: 1664733663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_100
+      rect:
+        serializedVersion: 2
+        x: 5796
+        y: 1384
+        width: 574
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee30220bd3ac18f4c99fd95351236751
+      internalID: -1466576382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_101
+      rect:
+        serializedVersion: 2
+        x: 6375
+        y: 1384
+        width: 573
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4dfdbc6e8879f48a8f2b3bef5f1609
+      internalID: -650988788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_102
+      rect:
+        serializedVersion: 2
+        x: 6954
+        y: 1384
+        width: 573
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee68f709afeaa242a2d52b58b5012bc
+      internalID: 1628946576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_103
+      rect:
+        serializedVersion: 2
+        x: 7533
+        y: 1384
+        width: 574
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa68fcf5fb9318499d0597cdc162925
+      internalID: 419083146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_104
+      rect:
+        serializedVersion: 2
+        x: 8111
+        y: 1384
+        width: 574
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21080b3c5aef004b9c31d788eabee22
+      internalID: -600109647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_105
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 691
+        width: 575
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3faf00a8d80fd2740a2e8e214e597f63
+      internalID: 196662638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_106
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 691
+        width: 575
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c473a267e593564f83560f4ab906249
+      internalID: 716983923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_107
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 691
+        width: 575
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e86d26b415a48b409d09020ad7dbece
+      internalID: 1597303818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_108
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 691
+        width: 574
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc097d2b9b97c248b06e342fdb38976
+      internalID: 1498891536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_109
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 691
+        width: 573
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c97b46678c28343bb0360baa3ce6f8
+      internalID: -1635784282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_110
+      rect:
+        serializedVersion: 2
+        x: 2901
+        y: 691
+        width: 573
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d787135ea79d13444b8e9c08251cf751
+      internalID: -1954187515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_111
+      rect:
+        serializedVersion: 2
+        x: 3480
+        y: 691
+        width: 574
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17164df0b0282334294959356b03b3ea
+      internalID: 732568970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_112
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 691
+        width: 575
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd42e1912f9d654e9285906e0b54c1f
+      internalID: 67084209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_113
+      rect:
+        serializedVersion: 2
+        x: 4637
+        y: 691
+        width: 575
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899a56ffff7e43b4096ac49760a94ddc
+      internalID: -800423799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_114
+      rect:
+        serializedVersion: 2
+        x: 5216
+        y: 691
+        width: 575
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0526ab4d4a4b46e4dbdc20ce9aa4d11f
+      internalID: 414692332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_115
+      rect:
+        serializedVersion: 2
+        x: 5795
+        y: 691
+        width: 575
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b58d4f76465f23488e527474017cbcd
+      internalID: 1320323412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_116
+      rect:
+        serializedVersion: 2
+        x: 6375
+        y: 691
+        width: 573
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d593dbe0cfd47004e9fce198a34c3f4e
+      internalID: -311068119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_117
+      rect:
+        serializedVersion: 2
+        x: 6954
+        y: 691
+        width: 573
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caac93b82a0b3654895b36af3d26568a
+      internalID: 1393742677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_118
+      rect:
+        serializedVersion: 2
+        x: 7533
+        y: 691
+        width: 574
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f41f15404fcc08439e491f8c7ec4476
+      internalID: 1440421200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_119
+      rect:
+        serializedVersion: 2
+        x: 8111
+        y: 691
+        width: 574
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64637cc545668c40b336ed9e27efe1b
+      internalID: 84707922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaoyao_120
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 575
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01b336836282054ca8de365a491b13c
+      internalID: 296138970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 62b4da1de5e3c2847aa8db0f668ea987
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      chaoyao_0: -1949985517
+      chaoyao_1: 1611026914
+      chaoyao_10: -1483108739
+      chaoyao_100: -1466576382
+      chaoyao_101: -650988788
+      chaoyao_102: 1628946576
+      chaoyao_103: 419083146
+      chaoyao_104: -600109647
+      chaoyao_105: 196662638
+      chaoyao_106: 716983923
+      chaoyao_107: 1597303818
+      chaoyao_108: 1498891536
+      chaoyao_109: -1635784282
+      chaoyao_11: 1945246029
+      chaoyao_110: -1954187515
+      chaoyao_111: 732568970
+      chaoyao_112: 67084209
+      chaoyao_113: -800423799
+      chaoyao_114: 414692332
+      chaoyao_115: 1320323412
+      chaoyao_116: -311068119
+      chaoyao_117: 1393742677
+      chaoyao_118: 1440421200
+      chaoyao_119: 84707922
+      chaoyao_12: -221286126
+      chaoyao_120: 296138970
+      chaoyao_13: -842852901
+      chaoyao_14: 1482252916
+      chaoyao_15: 1267844430
+      chaoyao_16: 2005356311
+      chaoyao_17: 2103268545
+      chaoyao_18: 381567133
+      chaoyao_19: -994948154
+      chaoyao_2: 1288220052
+      chaoyao_20: 72448550
+      chaoyao_21: 904654820
+      chaoyao_22: 1730022815
+      chaoyao_23: 880776911
+      chaoyao_24: 1638452807
+      chaoyao_25: 1318471412
+      chaoyao_26: 1124750827
+      chaoyao_27: -1793266727
+      chaoyao_28: -58544887
+      chaoyao_29: 2141433596
+      chaoyao_3: -877865792
+      chaoyao_30: -552154767
+      chaoyao_31: -862719632
+      chaoyao_32: 109598188
+      chaoyao_33: -420747497
+      chaoyao_34: -716831214
+      chaoyao_35: -1391201952
+      chaoyao_36: -1502495261
+      chaoyao_37: -703737057
+      chaoyao_38: -1108694522
+      chaoyao_39: 1279320149
+      chaoyao_4: 486314545
+      chaoyao_40: 1143023777
+      chaoyao_41: 476768300
+      chaoyao_42: -244474653
+      chaoyao_43: -796091646
+      chaoyao_44: 1064101526
+      chaoyao_45: 465651584
+      chaoyao_46: 664117431
+      chaoyao_47: 664397008
+      chaoyao_48: -57953307
+      chaoyao_49: -599903688
+      chaoyao_5: 424431520
+      chaoyao_50: -1273402190
+      chaoyao_51: -1219093401
+      chaoyao_52: -1227552710
+      chaoyao_53: -1552744358
+      chaoyao_54: 334892371
+      chaoyao_55: -1178911514
+      chaoyao_56: -557889201
+      chaoyao_57: -719775026
+      chaoyao_58: 1307976157
+      chaoyao_59: -109554162
+      chaoyao_6: 1342026615
+      chaoyao_60: -542876829
+      chaoyao_61: 957502371
+      chaoyao_62: 448178842
+      chaoyao_63: -852902916
+      chaoyao_64: 796304286
+      chaoyao_65: -17644796
+      chaoyao_66: -1280219198
+      chaoyao_67: 1317874723
+      chaoyao_68: -198518560
+      chaoyao_69: -1018545920
+      chaoyao_7: -349263116
+      chaoyao_70: 378415644
+      chaoyao_71: -2132530153
+      chaoyao_72: 1345565819
+      chaoyao_73: 1546011444
+      chaoyao_74: -830931690
+      chaoyao_75: -439488162
+      chaoyao_76: -1425481455
+      chaoyao_77: -113627692
+      chaoyao_78: 521878733
+      chaoyao_79: -781908422
+      chaoyao_8: -1775512801
+      chaoyao_80: 1608828676
+      chaoyao_81: 1137932196
+      chaoyao_82: 805468363
+      chaoyao_83: -78659438
+      chaoyao_84: -615485010
+      chaoyao_85: 1410734969
+      chaoyao_86: 872907302
+      chaoyao_87: 1052107361
+      chaoyao_88: -1971545551
+      chaoyao_89: 1658632316
+      chaoyao_9: -290774104
+      chaoyao_90: 1205833078
+      chaoyao_91: 2007770979
+      chaoyao_92: 896839595
+      chaoyao_93: -1677254482
+      chaoyao_94: 1568259910
+      chaoyao_95: -33307152
+      chaoyao_96: 1180540420
+      chaoyao_97: -1050510604
+      chaoyao_98: 1503536297
+      chaoyao_99: 1664733663
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
