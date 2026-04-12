@@ -84,8 +84,8 @@ public class InventoryUI : MonoBehaviour
 
         if (InventoryManager.Instance == null) return;
 
-        List<InventoryEntry> entries = InventoryManager.Instance.GetAllSlots();
-        foreach (InventoryEntry entry in entries)
+        List<InventoryEntry> allEntries = InventoryManager.Instance.entries;
+        foreach (InventoryEntry entry in allEntries)
         {
             if (entry.item != null && entry.item.category != category) continue;
 
