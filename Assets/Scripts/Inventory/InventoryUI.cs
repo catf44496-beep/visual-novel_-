@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class InventoryUI : MonoBehaviour
 {
     [Header("格子 Prefab")]
-    public GameObject slotPrefab;
+    public InventorySlotUI slotPrefab;
 
     [Header("右侧详情面板")]
     public Image  detailIcon;
@@ -90,8 +90,7 @@ public class InventoryUI : MonoBehaviour
             if (entry.item != null && entry.item.category != category) continue;
 
             GameObject go = (GameObject)Object.Instantiate((Object)slotPrefab, gridContent, false);
-            InventorySlotUI sui = go.GetComponent<InventorySlotUI>();
-            if (sui == null) sui = go.AddComponent<InventorySlotUI>();
+            InventorySlotUI sui = suiInst;
             sui.Init(this);
 
             if (entry.item != null)
