@@ -128,7 +128,7 @@ public class InventoryUI : MonoBehaviour
             detailRarity.color = item.GetRarityColor();
         }
         if (detailDesc   != null) detailDesc.text    = item.description;
-        if (detailEffect != null) detailEffect.text  = item.effectDescription;
+        if (detailEffect != null) detailEffect.text  = item.effect;
         if (detailWeight != null) detailWeight.text  = "重量 " + item.weight + " kg  |  数量 " + count;
 
         if (item.category == ItemCategory.Collectible && item.isUnlocked)
