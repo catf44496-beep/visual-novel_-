@@ -12,6 +12,11 @@ public class PickupItem : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        TryPickup();
+    }
+
+    public void TryPickup()
+    {
         // 1. 前置校验
         if (itemData == null)
         {
@@ -33,8 +38,9 @@ public class PickupItem : MonoBehaviour, IPointerClickHandler
         {
             Debug.Log($"成功拾取: {itemData.itemName} x {amount}");
 
-            // 主动刷新背包 UI（InventoryManager 也会通过事件通知，双保险）
-            FindObjectOfType<InventoryUI>()?.RefreshGrid(ItemCategory.Survival);
+            InventoryUI ui = Object.FindObjectOfType<InventoryUI>();
+            if (ui != null && ui.gameObject.activeSelf)
+                ui.RefreshGrid(ItemCategory.Survival);
 
             Destroy(gameObject);
         }
