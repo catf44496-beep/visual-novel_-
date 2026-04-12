@@ -1,109 +1,199 @@
-// InventoryUI.cs — 背包面板控制器（网格布局）
-// 挂载在 InventoryPanel 根物体上
-// 层级：Canvas > InventoryPanel(此脚本) > Viewport > SlotGrid
-
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// 背包 UI 控制器
+/// 层级结构参考：
+///   InventoryPanel
+///     TabBar
+///       BtnSurvival / BtnCollectible / BtnMarket
+///     GridContainer   ← ScrollView 内放 GridLayoutGroup
+///     DetailPanel
+///       DetailIcon / DetailName / DetailRarity / DetailDesc / DetailEffect / DetailWeight
+///     StatusBar
+///       TxtWeight / TxtCodex / TxtReputation
+/// </summary>
 public class InventoryUI : MonoBehaviour
 {
-    [Header("面板引用")]
+    // ── Inspector 引用 ────────────────────────────────────────────
+    [Header("面板根节点")]
     [SerializeField] private GameObject inventoryPanel;
-    [SerializeField] private Transform  slotGrid;           // GridLayoutGroup 所在物体
-    [SerializeField] private GameObject slotPrefab;         // InventorySlot 预制体
-    [SerializeField] private TextMeshProUGUI slotCountText; // "12 / 24"
-    [SerializeField] private KeyCode toggleKey = KeyCode.Tab;
 
     [Header("标签页按钮")]
-    [SerializeField] private Button tabSurvival;
-    [SerializeField] private Button tabCollectible;
-    [SerializeField] private Button tabAll;
+    [SerializeField] private Button btnSurvival;
+    [SerializeField] private Button btnCollectible;
+    [SerializeField] private Button btnMarket;
 
-    private List<InventorySlot> slotViews = new List<InventorySlot>();
-    private ItemType? currentFilter = null; // null = 全部
+    [Header("Grid 容器（带 GridLayoutGroup）")]
+    [SerializeField] private Transform gridContainer;
+    [SerializeField] private GameObject slotPrefab;      // 每个格子的 Prefab
 
-    // ──────────────────────────────────────────
+    [Header("详情面板")]
+    [SerializeField] private Image  detailIcon;
+    [SerializeField] private TMP_Text detailName;
+    [SerializeField] private TMP_Text detailRarity;
+    [SerializeField] private TMP_Text detailDesc;
+    [SerializeField] private TMP_Text detailEffect;
+    [SerializeField] private TMP_Text detailWeight;
+    [SerializeField] private TMP_Text detailStory;       // 仅收集品使用
+    [SerializeField] private GameObject storyPanel;
 
+    [Header("状态栏")]
+    [SerializeField] private TMP_Text txtWeight;
+    [SerializeField] private TMP_Text txtSlots;
+    [SerializeField] private TMP_Text txtCodex;
+
+    [Header("当前 Tab 选中色 / 默认色")]
+    [SerializeField] private Color tabActiveColor   = new Color(0.85f, 0.78f, 0.44f);
+    [SerializeField] private Color tabDefaultColor  = new Color(0.35f, 0.33f, 0.27f);
+
+    // ── 运行时 ────────────────────────────────────────────────────
+    private enum TabMode { Survival, Collectible, Market }
+    private TabMode currentTab = TabMode.Survival;
+    private List<InventorySlotUI> spawnedSlots = new();
+    private InventorySlotUI selectedSlot;
+
+    // ── 生命周期 ─────────────────────────────────────────────────
     private void Start()
     {
-        // 预生成格子
-        for (int i = 0; i < InventoryManager.Instance.SlotCount; i++)
-        {
-            var go   = Instantiate(slotPrefab, slotGrid);
-            var slot = go.GetComponent<InventorySlot>();
-            slotViews.Add(slot);
-        }
+        InventoryManager.Instance.OnInventoryChanged += RefreshGrid;
 
-        // 订阅数据变化
-        InventoryManager.Instance.OnInventoryChanged += RefreshUI;
+        btnSurvival  .onClick.AddListener(() => SwitchTab(TabMode.Survival));
+        btnCollectible.onClick.AddListener(() => SwitchTab(TabMode.Collectible));
+        btnMarket    .onClick.AddListener(() => SwitchTab(TabMode.Market));
 
-        // 标签页
-        tabSurvival?.onClick.AddListener(() => SetFilter(ItemType.Survival));
-        tabCollectible?.onClick.AddListener(() => SetFilter(ItemType.Collectible));
-        tabAll?.onClick.AddListener(() => SetFilter(null));
-
-        inventoryPanel.SetActive(false);
-        RefreshUI();
+        SwitchTab(TabMode.Survival);
     }
 
     private void OnDestroy()
     {
         if (InventoryManager.Instance != null)
-            InventoryManager.Instance.OnInventoryChanged -= RefreshUI;
+            InventoryManager.Instance.OnInventoryChanged -= RefreshGrid;
     }
 
-    // ──────────────────────────────────────────
-    // 开关 & 刷新
-    // ──────────────────────────────────────────
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(toggleKey))
-            TogglePanel();
-    }
-
+    // ── 公共接口 ─────────────────────────────────────────────────
     public void TogglePanel()
     {
-        bool nowOpen = !inventoryPanel.activeSelf;
-        inventoryPanel.SetActive(nowOpen);
-        if (nowOpen) RefreshUI();
+        inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+        if (inventoryPanel.activeSelf) RefreshGrid();
     }
 
-    private void SetFilter(ItemType? filter)
+    // ── Tab 切换 ─────────────────────────────────────────────────
+    private void SwitchTab(TabMode tab)
     {
-        currentFilter = filter;
-        RefreshUI();
+        currentTab   = tab;
+        selectedSlot = null;
+        ClearDetail();
+        UpdateTabVisuals();
+        RefreshGrid();
     }
 
-    // ──────────────────────────────────────────
-    // 核心刷新逻辑
-    // ──────────────────────────────────────────
-
-    public void RefreshUI()
+    private void UpdateTabVisuals()
     {
-        var allItems = InventoryManager.Instance.Items;
+        SetTabColor(btnSurvival,    currentTab == TabMode.Survival);
+        SetTabColor(btnCollectible, currentTab == TabMode.Collectible);
+        SetTabColor(btnMarket,      currentTab == TabMode.Market);
+    }
 
-        // 筛选
-        var filtered = new List<InventoryItem>();
-        foreach (var item in allItems)
+    private void SetTabColor(Button btn, bool active)
+    {
+        var txt = btn.GetComponentInChildren<TMP_Text>();
+        if (txt) txt.color = active ? tabActiveColor : tabDefaultColor;
+    }
+
+    // ── Grid 刷新 ─────────────────────────────────────────────────
+    private void RefreshGrid()
+    {
+        // 清除旧格子
+        foreach (var s in spawnedSlots) Destroy(s.gameObject);
+        spawnedSlots.Clear();
+
+        var slots = InventoryManager.Instance.GetAllSlots();
+
+        foreach (var slot in slots)
         {
-            if (currentFilter == null || item.data.itemType == currentFilter)
-                filtered.Add(item);
+            // 根据当前 Tab 决定是否跳过
+            if (!ShouldShowSlot(slot)) continue;
+
+            var go  = Instantiate(slotPrefab, gridContainer);
+            var sui = go.GetComponent<InventorySlotUI>();
+            sui.Setup(slot, OnSlotClicked);
+            spawnedSlots.Add(sui);
         }
 
-        // 填充格子
-        for (int i = 0; i < slotViews.Count; i++)
-        {
-            if (i < filtered.Count)
-                slotViews[i].Bind(filtered[i]);
-            else
-                slotViews[i].SetEmpty();
-        }
+        RefreshStatusBar();
+    }
 
-        // 更新数量文字
-        if (slotCountText != null)
-            slotCountText.text = $"{InventoryManager.Instance.UsedSlots} / {InventoryManager.Instance.SlotCount}";
+    private bool ShouldShowSlot(InventorySlot slot)
+    {
+        if (slot.IsEmpty) return currentTab == TabMode.Survival; // 空槽只在生存页显示
+        return currentTab switch
+        {
+            TabMode.Survival    => slot.itemData.category == ItemCategory.Survival,
+            TabMode.Collectible => slot.itemData.category == ItemCategory.Collectible,
+            TabMode.Market      => slot.itemData.category == ItemCategory.Collectible
+                                   && slot.itemData.canExchange,
+            _ => false
+        };
+    }
+
+    // ── 点击格子 ─────────────────────────────────────────────────
+    private void OnSlotClicked(InventorySlotUI sui)
+    {
+        if (selectedSlot != null) selectedSlot.SetHighlight(false);
+        selectedSlot = sui;
+        selectedSlot.SetHighlight(true);
+        ShowDetail(sui.Slot);
+    }
+
+    // ── 详情面板 ─────────────────────────────────────────────────
+    private void ShowDetail(InventorySlot slot)
+    {
+        if (slot.IsEmpty) { ClearDetail(); return; }
+
+        var item = slot.itemData;
+        if (detailIcon)   detailIcon.sprite = item.icon;
+        if (detailName)   detailName.text   = item.itemName;
+        if (detailRarity)
+        {
+            detailRarity.text  = item.GetRarityLabel();
+            detailRarity.color = item.GetRarityColor();
+        }
+        if (detailDesc)   detailDesc.text   = item.description;
+        if (detailEffect) detailEffect.text  = item.effectDescription;
+        if (detailWeight) detailWeight.text  = $"重量 {item.weight} kg  |  数量 {slot.amount}";
+
+        bool isCollectible = item.category == ItemCategory.Collectible;
+        if (storyPanel) storyPanel.SetActive(isCollectible && item.isUnlocked);
+        if (detailStory && isCollectible && item.isUnlocked)
+            detailStory.text = item.backgroundStory;
+    }
+
+    private void ClearDetail()
+    {
+        if (detailIcon)   detailIcon.sprite = null;
+        if (detailName)   detailName.text   = "";
+        if (detailRarity) detailRarity.text = "";
+        if (detailDesc)   detailDesc.text   = "← 选择物品查看详情";
+        if (detailEffect) detailEffect.text = "";
+        if (detailWeight) detailWeight.text = "";
+        if (storyPanel)   storyPanel.SetActive(false);
+    }
+
+    // ── 状态栏 ────────────────────────────────────────────────────
+    private void RefreshStatusBar()
+    {
+        var mgr = InventoryManager.Instance;
+        if (txtWeight) txtWeight.text = $"总重量 {mgr.GetTotalWeight():F1} kg";
+        if (txtSlots)  txtSlots.text  = $"{mgr.UsedSlotCount} / {mgr.MaxSlots} 格";
+
+        // 图鉴统计
+        var slots    = mgr.GetAllSlots();
+        int total    = slots.Count(s => !s.IsEmpty && s.itemData.category == ItemCategory.Collectible);
+        int unlocked = slots.Count(s => !s.IsEmpty && s.itemData.category == ItemCategory.Collectible
+                                        && s.itemData.isUnlocked);
+        if (txtCodex) txtCodex.text = $"图鉴 {unlocked}/{total}";
     }
 }
