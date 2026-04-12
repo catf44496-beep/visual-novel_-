@@ -1,79 +1,100 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using System;
+using UnityEngine.EventSystems;
 
-/// <summary>
-/// 背包格子 Prefab 脚本
-/// Prefab 层级：
-///   SlotRoot (Image — 背景)
-///     Icon (Image — 物品图标)
-///     CountBadge (TMP_Text — 右下角数量)
-///     RarityPip (Image — 左上角稀有度小圆点)
-///     SelectedOverlay (Image — 高亮遮罩，默认 disabled)
-/// </summary>
-[RequireComponent(typeof(Button))]
-public class InventorySlotUI : MonoBehaviour
+public class InventorySlotUI : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] private Image      slotBackground;
-    [SerializeField] private Image      itemIcon;
-    [SerializeField] private TMP_Text   countText;
-    [SerializeField] private Image      rarityPip;
-    [SerializeField] private GameObject selectedOverlay;
+    [Header("UI 组件")]
+    public Image      iconBg;
+    public Image      iconImage;
+    public Text       countText;
+    public Image      rarityPip;
+    public GameObject selectedOverlay;
 
-    [Header("颜色：空槽 / 有物品 / 选中")]
-    [SerializeField] private Color emptyBg    = new Color(0.145f, 0.137f, 0.094f);
-    [SerializeField] private Color filledBg   = new Color(0.145f, 0.157f, 0.094f);
-    [SerializeField] private Color selectedBg = new Color(0.176f, 0.165f, 0.094f);
+    [Header("当前物品数据")]
+    public ItemData currentItem;
+    public int      currentCount;
+    public bool     isEmpty = true;
 
-    // ── 运行时数据 ────────────────────────────────────────────────
-    public InventorySlot Slot { get; private set; }
-    private Action<InventorySlotUI> onClick;
+    private InventoryUI mainUI;
 
-    // ── 初始化 ────────────────────────────────────────────────────
-    public void Setup(InventorySlot slot, Action<InventorySlotUI> clickCallback)
+    private static readonly Color[] RarityColors =
     {
-        Slot    = slot;
-        onClick = clickCallback;
+        new Color(0.70f, 0.70f, 0.70f),
+        new Color(0.30f, 0.80f, 0.30f),
+        new Color(0.30f, 0.50f, 1.00f),
+        new Color(0.70f, 0.30f, 1.00f),
+    };
 
-        GetComponent<Button>().onClick.AddListener(() => onClick?.Invoke(this));
-        Refresh();
+    private void Awake()
+    {
+        iconBg          = transform.Find("IconBG")?.GetComponent<Image>();
+        iconImage       = transform.Find("IconBG/IconImage")?.GetComponent<Image>();
+        countText       = transform.Find("CountText")?.GetComponent<Text>();
+        rarityPip       = transform.Find("RarityPip")?.GetComponent<Image>();
+        selectedOverlay = transform.Find("SelectedOverlay")?.gameObject;
+
+        if (selectedOverlay != null)
+        {
+            Image ov = selectedOverlay.GetComponent<Image>();
+            if (ov != null) ov.raycastTarget = false;
+        }
     }
 
-    // ── 刷新显示 ──────────────────────────────────────────────────
-    public void Refresh()
+    public void Init(InventoryUI uiManager)
     {
-        bool empty = Slot == null || Slot.IsEmpty;
-
-        if (slotBackground)
-            slotBackground.color = empty ? emptyBg : filledBg;
-
-        if (itemIcon)
-        {
-            itemIcon.enabled = !empty;
-            if (!empty) itemIcon.sprite = Slot.itemData.icon;
-        }
-
-        if (countText)
-        {
-            countText.gameObject.SetActive(!empty && Slot.amount > 1);
-            if (!empty) countText.text = Slot.amount.ToString();
-        }
-
-        if (rarityPip)
-        {
-            rarityPip.gameObject.SetActive(!empty);
-            if (!empty) rarityPip.color = Slot.itemData.GetRarityColor();
-        }
-
-        SetHighlight(false);
+        mainUI = uiManager;
     }
 
-    // ── 高亮控制 ──────────────────────────────────────────────────
-    public void SetHighlight(bool on)
+    public void SetItem(ItemData item, int count)
     {
-        if (selectedOverlay) selectedOverlay.SetActive(on);
-        if (slotBackground && Slot != null && !Slot.IsEmpty)
-            slotBackground.color = on ? selectedBg : filledBg;
+        currentItem  = item;
+        currentCount = count;
+        isEmpty      = false;
+
+        if (iconBg    != null) iconBg.gameObject.SetActive(true);
+        if (countText != null)
+        {
+            countText.gameObject.SetActive(count > 1);
+            countText.text = count.ToString();
+        }
+        if (rarityPip != null)
+        {
+            rarityPip.gameObject.SetActive(true);
+            int ri = Mathf.Clamp((int)item.rarity, 0, RarityColors.Length - 1);
+            rarityPip.color = RarityColors[ri];
+        }
+        if (iconImage != null)
+        {
+            iconImage.gameObject.SetActive(item.icon != null);
+            if (item.icon != null) iconImage.sprite = item.icon;
+        }
+    }
+
+    public void SetEmpty()
+    {
+        currentItem  = null;
+        currentCount = 0;
+        isEmpty      = true;
+
+        if (iconBg    != null) iconBg.gameObject.SetActive(false);
+        if (countText != null) countText.gameObject.SetActive(false);
+        if (rarityPip != null) rarityPip.gameObject.SetActive(false);
+        if (iconImage != null) iconImage.gameObject.SetActive(false);
+
+        Image bg = GetComponent<Image>();
+        if (bg != null) bg.color = new Color(0.14f, 0.13f, 0.09f, 0.5f);
+        SetSelected(false);
+    }
+
+    public void SetSelected(bool isSelected)
+    {
+        if (selectedOverlay != null) selectedOverlay.SetActive(isSelected);
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (isEmpty || currentItem == null) return;
+        if (mainUI != null) mainUI.OnSlotSelected(this);
     }
 }
