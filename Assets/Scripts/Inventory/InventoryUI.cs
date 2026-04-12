@@ -1,196 +1,154 @@
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+using System.Collections.Generic;
 
-/// <summary>
-/// 背包 UI 控制�?/// 层级结构参考：
-///   InventoryPanel
-///     TabBar
-///       BtnSurvival / BtnCollectible / BtnMarket
-///     GridContainer   �?ScrollView 内放 GridLayoutGroup
-///     DetailPanel
-///       DetailIcon / DetailName / DetailRarity / DetailDesc / DetailEffect / DetailWeight
-///     StatusBar
-///       TxtWeight / TxtCodex / TxtReputation
-/// </summary>
 public class InventoryUI : MonoBehaviour
 {
-    // ── Inspector 引用 ────────────────────────────────────────────
-    [Header("面板根节�?)]
-    [SerializeField] private GameObject inventoryPanel;
+    [Header("格子 Prefab")]
+    public GameObject slotPrefab;
 
-    [Header("标签页按�?)]
-    [SerializeField] private Button btnSurvival;
-    [SerializeField] private Button btnCollectible;
-    [SerializeField] private Button btnMarket;
+    [Header("右侧详情面板")]
+    public Image  detailIcon;
+    public Text   detailName;
+    public Text   detailRarity;
+    public Text   detailDesc;
+    public Text   detailEffect;
+    public Text   detailWeight;
 
-    [Header("Grid 容器（带 GridLayoutGroup�?)]
-    [SerializeField] private Transform gridContainer;
-    [SerializeField] private GameObject slotPrefab;      // 每个格子�?Prefab
+    [Header("槽位容器")]
+    public Transform gridContent;
 
-    [Header("详情面板")]
-    [SerializeField] private Image  detailIcon;
-    [SerializeField] private TMP_Text detailName;
-    [SerializeField] private TMP_Text detailRarity;
-    [SerializeField] private TMP_Text detailDesc;
-    [SerializeField] private TMP_Text detailEffect;
-    [SerializeField] private TMP_Text detailWeight;
-    [SerializeField] private TMP_Text detailStory;       // 仅收集品使用
-    [SerializeField] private GameObject storyPanel;
+    [Header("Tab 按钮")]
+    public Button tabSurvival;
+    public Button tabCodex;
+    public Button tabMarket;
 
-    [Header("状态栏")]
-    [SerializeField] private TMP_Text txtWeight;
-    [SerializeField] private TMP_Text txtSlots;
-    [SerializeField] private TMP_Text txtCodex;
+    private List<InventorySlotUI> spawnedSlots = new List<InventorySlotUI>();
+    private InventorySlotUI currentSelectedSlot;
 
-    [Header("当前 Tab 选中�?/ 默认�?)]
-    [SerializeField] private Color tabActiveColor   = new Color(0.85f, 0.78f, 0.44f);
-    [SerializeField] private Color tabDefaultColor  = new Color(0.35f, 0.33f, 0.27f);
+    private static readonly string[] RarityLabels = { "普通", "非常见", "稀有", "史诗" };
 
-    // ── 运行�?────────────────────────────────────────────────────
-    private enum TabMode { Survival, Collectible, Market }
-    private TabMode currentTab = TabMode.Survival;
-    private List<InventoryEntryUI> spawnedSlots = new();
-    private InventoryEntryUI selectedSlot;
-
-    // ── 生命周期 ─────────────────────────────────────────────────
     private void Start()
     {
-        InventoryManager.Instance.OnInventoryChanged += RefreshGrid;
+        Transform dp = transform.Find("Body/DetailPanel");
+        if (dp != null)
+        {
+            Transform iconTr = dp.Find("DetailIcon");
+            if (iconTr != null) detailIcon = iconTr.GetComponent<Image>();
+            detailName   = FindText(dp, "NameText");
+            detailRarity = FindText(dp, "RarityText");
+            detailDesc   = FindText(dp, "DescText");
+            detailEffect = FindText(dp, "EffectBox/EffectText");
+            detailWeight = FindText(dp, "WeightText");
+        }
 
-        btnSurvival  .onClick.AddListener(() => SwitchTab(TabMode.Survival));
-        btnCollectible.onClick.AddListener(() => SwitchTab(TabMode.Collectible));
-        btnMarket    .onClick.AddListener(() => SwitchTab(TabMode.Market));
+        if (gridContent == null)
+        {
+            Transform gc = transform.Find("Body/GridContainer/Content");
+            if (gc != null) gridContent = gc;
+        }
 
-        SwitchTab(TabMode.Survival);
+        if (tabSurvival != null) tabSurvival.onClick.AddListener(() => RefreshGrid(ItemCategory.Survival));
+        if (tabCodex    != null) tabCodex.onClick.AddListener(()    => RefreshGrid(ItemCategory.Collectible));
+
+        if (InventoryManager.Instance != null)
+            InventoryManager.Instance.OnInventoryChanged += OnInventoryChanged;
+
+        ClearDetail();
+        RefreshGrid(ItemCategory.Survival);
     }
 
     private void OnDestroy()
     {
         if (InventoryManager.Instance != null)
-            InventoryManager.Instance.OnInventoryChanged -= RefreshGrid;
+            InventoryManager.Instance.OnInventoryChanged -= OnInventoryChanged;
     }
 
-    // ── 公共接口 ─────────────────────────────────────────────────
-    public void TogglePanel()
+    private void OnInventoryChanged()
     {
-        inventoryPanel.SetActive(!inventoryPanel.activeSelf);
-        if (inventoryPanel.activeSelf) RefreshGrid();
+        RefreshGrid(ItemCategory.Survival);
     }
 
-    // ── Tab 切换 ─────────────────────────────────────────────────
-    private void SwitchTab(TabMode tab)
-    {
-        currentTab   = tab;
-        selectedSlot = null;
-        ClearDetail();
-        UpdateTabVisuals();
-        RefreshGrid();
-    }
+    public void Toggle() { gameObject.SetActive(!gameObject.activeSelf); }
+    public void Open()   { gameObject.SetActive(true); RefreshGrid(ItemCategory.Survival); }
+    public void Close()  { gameObject.SetActive(false); }
 
-    private void UpdateTabVisuals()
+    public void RefreshGrid(ItemCategory category)
     {
-        SetTabColor(btnSurvival,    currentTab == TabMode.Survival);
-        SetTabColor(btnCollectible, currentTab == TabMode.Collectible);
-        SetTabColor(btnMarket,      currentTab == TabMode.Market);
-    }
+        if (gridContent == null || slotPrefab == null) return;
 
-    private void SetTabColor(Button btn, bool active)
-    {
-        var txt = btn.GetComponentInChildren<TMP_Text>();
-        if (txt) txt.color = active ? tabActiveColor : tabDefaultColor;
-    }
-
-    // ── Grid 刷新 ─────────────────────────────────────────────────
-    private void RefreshGrid()
-    {
-        // 清除旧格�?        foreach (var s in spawnedSlots) Destroy(s.gameObject);
+        foreach (InventorySlotUI s in spawnedSlots)
+            if (s != null) Destroy(s.gameObject);
         spawnedSlots.Clear();
+        currentSelectedSlot = null;
 
-        var slots = InventoryManager.Instance.GetAllSlots();
+        if (InventoryManager.Instance == null) return;
 
-        foreach (var slot in slots)
+        List<InventoryEntry> entries = InventoryManager.Instance.GetAllSlots();
+        foreach (InventoryEntry entry in entries)
         {
-            // 根据当前 Tab 决定是否跳过
-            if (!ShouldShowSlot(slot)) continue;
+            if (entry.item != null && entry.item.category != category) continue;
 
-            var go  = Instantiate(slotPrefab, gridContainer);
-            var sui = go.GetComponent<InventoryEntryUI>();
-            sui.Setup(slot, OnSlotClicked);
+            GameObject go = Instantiate(slotPrefab, gridContent);
+            InventorySlotUI sui = go.GetComponent<InventorySlotUI>();
+            if (sui == null) sui = go.AddComponent<InventorySlotUI>();
+            sui.Init(this);
+
+            if (entry.item != null)
+                sui.SetItem(entry.item, entry.count);
+            else
+                sui.SetEmpty();
+
             spawnedSlots.Add(sui);
         }
-
-        RefreshStatusBar();
     }
 
-    private bool ShouldShowSlot(InventoryEntry slot)
+    public void OnSlotSelected(InventorySlotUI clicked)
     {
-        if (slot.item == null) return currentTab == TabMode.Survival; // 空槽只在生存页显�?        return currentTab switch
+        if (currentSelectedSlot != null) currentSelectedSlot.SetSelected(false);
+        currentSelectedSlot = clicked;
+        currentSelectedSlot.SetSelected(true);
+        UpdateDetailPanel(clicked.currentItem, clicked.currentCount);
+    }
+
+    private void UpdateDetailPanel(ItemData item, int count)
+    {
+        if (item == null) { ClearDetail(); return; }
+
+        if (detailIcon != null)
         {
-            TabMode.Survival    => slot.item.category == ItemCategory.Survival,
-            TabMode.Collectible => slot.item.category == ItemCategory.Collectible,
-            TabMode.Market      => slot.item.category == ItemCategory.Collectible
-                                   && slot.item.canExchange,
-            _ => false
-        };
-    }
-
-    // ── 点击格子 ─────────────────────────────────────────────────
-    private void OnSlotClicked(InventoryEntryUI sui)
-    {
-        if (selectedSlot != null) selectedSlot.SetHighlight(false);
-        selectedSlot = sui;
-        selectedSlot.SetHighlight(true);
-        ShowDetail(sui.Slot);
-    }
-
-    // ── 详情面板 ─────────────────────────────────────────────────
-    private void ShowDetail(InventoryEntry slot)
-    {
-        if (slot.item == null) { ClearDetail(); return; }
-
-        var item = slot.item;
-        if (detailIcon)   detailIcon.sprite = item.icon;
-        if (detailName)   detailName.text   = item.itemName;
-        if (detailRarity)
+            detailIcon.gameObject.SetActive(item.icon != null);
+            if (item.icon != null) detailIcon.sprite = item.icon;
+        }
+        if (detailName    != null) detailName.text    = item.itemName;
+        if (detailRarity  != null)
         {
-            detailRarity.text  = item.GetRarityLabel();
+            int ri = Mathf.Clamp((int)item.rarity, 0, RarityLabels.Length - 1);
+            detailRarity.text  = RarityLabels[ri];
             detailRarity.color = item.GetRarityColor();
         }
-        if (detailDesc)   detailDesc.text   = item.description;
-        if (detailEffect) detailEffect.text  = item.effectDescription;
-        if (detailWeight) detailWeight.text  = $"重量 {item.weight} kg  |  数量 {slot.count}";
+        if (detailDesc   != null) detailDesc.text    = item.description;
+        if (detailEffect != null) detailEffect.text  = item.effectDescription;
+        if (detailWeight != null) detailWeight.text  = "重量 " + item.weight + " kg  |  数量 " + count;
 
-        bool isCollectible = item.category == ItemCategory.Collectible;
-        if (storyPanel) storyPanel.SetActive(isCollectible && item.isUnlocked);
-        if (detailStory && isCollectible && item.isUnlocked)
-            detailStory.text = item.backgroundStory;
+        if (item.category == ItemCategory.Collectible && item.isUnlocked)
+            if (detailDesc != null && !string.IsNullOrEmpty(item.backgroundStory))
+                detailDesc.text = item.description + "\n\n" + item.backgroundStory;
     }
 
     private void ClearDetail()
     {
-        if (detailIcon)   detailIcon.sprite = null;
-        if (detailName)   detailName.text   = "";
-        if (detailRarity) detailRarity.text = "";
-        if (detailDesc)   detailDesc.text   = "�?选择物品查看详情";
-        if (detailEffect) detailEffect.text = "";
-        if (detailWeight) detailWeight.text = "";
-        if (storyPanel)   storyPanel.SetActive(false);
+        if (detailIcon   != null) detailIcon.gameObject.SetActive(false);
+        if (detailName   != null) detailName.text   = "";
+        if (detailRarity != null) detailRarity.text = "";
+        if (detailDesc   != null) detailDesc.text   = "← 点击物品查看详情";
+        if (detailEffect != null) detailEffect.text = "";
+        if (detailWeight != null) detailWeight.text = "";
     }
 
-    // ── 状态栏 ────────────────────────────────────────────────────
-    private void RefreshStatusBar()
+    private static Text FindText(Transform root, string path)
     {
-        var mgr = InventoryManager.Instance;
-        if (txtWeight) txtWeight.text = $"总重�?{mgr.GetTotalWeight():F1} kg";
-        if (txtSlots)  txtSlots.text  = $"{mgr.UsedSlotCount} / {mgr.MaxSlots} �?;
-
-        // 图鉴统计
-        var slots    = mgr.GetAllSlots();
-        int total    = slots.Count(s => !s.item == null && s.item.category == ItemCategory.Collectible);
-        int unlocked = slots.Count(s => !s.item == null && s.item.category == ItemCategory.Collectible
-                                        && s.item.isUnlocked);
-        if (txtCodex) txtCodex.text = $"图鉴 {unlocked}/{total}";
+        Transform t = root.Find(path);
+        return t != null ? t.GetComponent<Text>() : null;
     }
 }
