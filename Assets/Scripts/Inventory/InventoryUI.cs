@@ -89,8 +89,7 @@ public class InventoryUI : MonoBehaviour
         {
             if (entry.item != null && entry.item.category != category) continue;
 
-            GameObject go = Instantiate(slotPrefab, gridContent, false) as GameObject;
-            if (go == null) go = (GameObject)Instantiate((Object)slotPrefab, gridContent, false);
+            GameObject go = (GameObject)Object.Instantiate((Object)slotPrefab, gridContent, false);
             InventorySlotUI sui = go.GetComponent<InventorySlotUI>();
             if (sui == null) sui = go.AddComponent<InventorySlotUI>();
             sui.Init(this);
