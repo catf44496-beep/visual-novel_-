@@ -1708,7 +1708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a37012be6480134ab42075b376d6637, type: 3}
   m_Name:
   m_EditorClassIdentifier:
-  slotPrefab: {fileID: 100100000, guid: 548de5bddf99b5c4597f8ec8c79f6782, type: 3}
+  slotPrefab: {fileID: 7477357507161575430, guid: 548de5bddf99b5c4597f8ec8c79f6782, type: 3}
   detailNameText: {fileID: 1016786172}
   detailRarityText: {fileID: 1180717171}
   detailDescText: {fileID: 1867866773}
